@@ -1,0 +1,42 @@
+import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Quotes from "@/components/Quotes";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+
+const hankenGrotesk = Hanken_Grotesk(
+  { subsets: ["latin"],
+    weight: "400",
+  });
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: "Pritam - A Full Stack Web Developer",
+  description: "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body
+        className={`${hankenGrotesk.className} ${geistSans.variable} ${geistMono.variable} dark:bg-black text-[#909092] antialiased`}
+      >
+        <Navbar />
+        {children}
+        <Quotes/>
+        <Footer/>
+      </body>
+    </html>
+  );
+}
