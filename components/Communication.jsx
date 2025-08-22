@@ -11,7 +11,7 @@ const Communication = () => {
     return (
         <div className='mb-20'>
             <div className='flex gap-2 mb-6'>
-                <Link href="/resume" className='w-fit flex items-center gap-1 dark:bg-black dark:text-white text-black px-2 py-1 rounded-md border border-gray-600 ring-black dark:ring-white hover:ring-2'>
+                <Link href="/resume" target='_blank' className='w-fit flex items-center gap-1 dark:bg-black dark:text-white text-black px-2 py-1 rounded-md border border-gray-600 ring-black dark:ring-white hover:ring-2'>
                     <span>
                         <Image src="/resume.png" className='dark:invert' alt="resume" width={20} height={20} />
                     </span>
