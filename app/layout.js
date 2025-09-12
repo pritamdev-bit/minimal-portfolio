@@ -24,6 +24,21 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Pritam - A Full Stack Web Developer",
   description: "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
+  openGraph: {
+    title: "Pritam - A Full Stack Web Developer",
+    description: "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
+    url: "https://itspritam.space",
+    siteName: "Pritam - A Full Stack Web Developer",
+    images: [
+      {
+        url: "/portfolio.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
