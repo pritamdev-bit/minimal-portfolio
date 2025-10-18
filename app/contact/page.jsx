@@ -1,4 +1,6 @@
+import { Linkedin } from "@/components/LinkedIn";
 import { Twitter } from "@/components/Twitter";
+import { MailPlus } from "lucide-react";
 import React from "react";
 export default function ContactPage() {
   return (
@@ -10,16 +12,16 @@ export default function ContactPage() {
         <div className="space-y-4 flex flex-col items-center">
           <a
             href="mailto:your@email.com"
-            className="block text-blue-600 hover:underline"
+            className="flex gap-2 text-blue-600 hover:underline"
           >
-            📧 mandalpritam8617@gmail.com
+            <MailPlus /> mandalpritam8617@gmail.com
           </a>
 
           <a
             href="https://x.com/rick_jsx"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex text-blue-500 hover:underline"
+            className="flex gap-2 text-blue-600 hover:underline"
           >
             <Twitter /> @rick_jsx
           </a>
@@ -28,9 +30,9 @@ export default function ContactPage() {
             href="https://www.linkedin.com/in/mandalpritam8617/"
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-blue-700 hover:underline"
+            className="flex gap-2 text-blue-600 hover:underline"
           >
-            🔗 LinkedIn Profile
+            <Linkedin /> LinkedIn Profile
           </a>
         </div>
       </div>
