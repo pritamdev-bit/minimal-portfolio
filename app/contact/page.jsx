@@ -11,7 +11,7 @@ export default function ContactPage() {
 
         <div className="space-y-4 flex flex-col items-center">
           <a
-            href="mailto:your@email.com"
+            href="mailto:mandalpritam8617@gmail.com"
             className="flex gap-2 text-blue-600 hover:underline"
           >
             <MailPlus /> mandalpritam8617@gmail.com
