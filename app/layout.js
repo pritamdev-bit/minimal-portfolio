@@ -31,7 +31,7 @@ export const metadata = {
     siteName: "Pritam - A Full Stack Web Developer",
     images: [
       {
-        url: "/portfolio.png",
+        url: "/newimg.png",
         width: 800,
         height: 600,
       },
