@@ -4,17 +4,14 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Quotes from "@/components/Quotes";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-
-const hankenGrotesk = Hanken_Grotesk(
-  { subsets: ["latin"],
-    weight: "400",
-  });
+const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"], weight: "400" });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -23,10 +20,12 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Pritam - A Full Stack Web Developer",
-  description: "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
+  description:
+    "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
   openGraph: {
     title: "Pritam - A Full Stack Web Developer",
-    description: "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
+    description:
+      "This is the portfolio website of Pritam Mandal, a Full Stack Web Developer.",
     url: "https://itspritam.space",
     siteName: "Pritam - A Full Stack Web Developer",
     images: [
@@ -38,19 +37,26 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${hankenGrotesk.className} ${geistSans.variable} ${geistMono.variable} dark:bg-black text-[#909092] antialiased`}
       >
-        <Navbar />
-        {children}
-        <Quotes/>
-        <Footer/>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Quotes />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
